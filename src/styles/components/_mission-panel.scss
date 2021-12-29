@@ -12,7 +12,7 @@
   }
 
   & .tag {
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem 0.6rem;
     margin-left: 0.6rem;
 
     border-radius: 0.5rem;
@@ -25,42 +25,14 @@
     &--green {
       background-color: $color-secondary-green;
     }
-  }
 
-  & .details-panel {
-    display: flex;
-    justify-content: space-between;
+    &--white {
+      padding: 0.6rem 1rem;
 
-    padding: 5rem 0;
-    border-bottom: 0.2rem solid $color-primary-gray;
+      background-color: $color-primary-white;
 
-    &__left {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-
-      & .learn-more {
-        width: fit-content;
-
-        padding: 2rem 4rem;
-
-        margin-top: 1.6rem;
-
-        border: 0.2rem solid $color-primary-white;
-        color: $color-primary-white;
-
-        text-transform: uppercase;
-
-        cursor: pointer;
-
-        &:hover {
-          opacity: 0.8;
-        }
-      }
+      font-weight: 400;
+      text-transform: capitalize;
     }
-  }
-
-  &__ship-panel {
-    background-color: red;
   }
 }

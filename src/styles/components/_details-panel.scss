@@ -1,0 +1,66 @@
+.details-panel {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5rem 0;
+  border-bottom: 0.2rem solid $color-primary-gray;
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__left {
+    & .learn-more {
+      width: fit-content;
+
+      padding: 2rem 4rem;
+
+      margin-top: 1.6rem;
+
+      border: 0.2rem solid $color-primary-white;
+      color: $color-primary-white;
+
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__right {
+    width: 50%;
+
+    text-align: right;
+
+    & .launch-site {
+      position: relative;
+
+      cursor: default;
+
+      &__tag {
+        display: none;
+        position: absolute;
+        top: 2.6rem;
+        right: 6rem;
+      }
+
+      & h3 {
+        display: inline;
+      }
+
+      & h3:hover {
+        opacity: 0.8;
+
+        & ~ .launch-site__tag {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.ships-panel {
+  margin-top: 4rem;
+}
+
+.ships-panel__cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+
+  margin-top: 3rem;
+}
+
+.ship-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-primary-white;
+  min-height: 34rem;
+
+  border-radius: 2rem;
+
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    min-height: 20rem;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__info {
+    height: fit-content;
+    padding: 2rem;
+
+    color: $color-primary-black;
+
+    & h2 {
+      border-bottom: 0.1rem solid $color-secondary-light;
+      padding-bottom: 1.4rem;
+      font-weight: 700;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    margin-top: 2rem;
+
+    vertical-align: middle;
+
+    & div {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 2rem;
+
+      & h5 {
+        font-weight: 700;
+      }
+    }
+  }
+}
