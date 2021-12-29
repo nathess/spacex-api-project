@@ -1,0 +1,16 @@
+$color-primary-white: #ffffff;
+$color-primary-gray: #868686;
+$color-primary-black: #000000;
+
+$color-secondary-red: #be4e35;
+$color-secondary-green: #6fb46e;
+$color-secondary-gray: #5c5c5d;
+
+// Background Color
+$background-color-1: #323237;
+
+$background-gradient: linear-gradient(
+  to right bottom,
+  $color-primary-black,
+  $background-color-1
+);

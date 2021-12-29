@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 6rem 0 4rem 0;
+
+  border-bottom: 0.2rem solid $color-secondary-gray;
+
+  & svg {
+    fill: $color-primary-white;
+  }
+
+  &__arrow {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__logo {
+    margin-top: 4rem;
+  }
+}
