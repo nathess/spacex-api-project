@@ -1,8 +1,14 @@
 import MissionDetails from "./MissionDetails";
 import ShipsPanel from "./ShipsPanel";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Mousewheel } from "swiper";
+import "swiper/css";
+
 import { pastLaunchesData } from "../data/past-launches";
 import { useQuery } from "@apollo/client";
+
+SwiperCore.use([Mousewheel]);
 
 function MissionPanel() {
   const { data, loading, error } = useQuery(pastLaunchesData);
@@ -18,14 +24,20 @@ function MissionPanel() {
 
   return (
     <section className="mission-panel">
-      {/* {data.launchesPast.map((mission, index) => {
-        return (
-          <div key={index}>
-            <MissionDetails missionDetails={mission} />
-            <ShipsPanel />
-          </div>
-        );
-      })} */}
+      <Swiper
+        spaceBetween={60}
+        slidesPerView={1}
+        mousewheel={{ invert: true, enabled: true }}
+      >
+        {data.launchesPast.map((mission, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <MissionDetails missionDetails={mission} />
+              <ShipsPanel missionDetails={mission} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </section>
   );
 }

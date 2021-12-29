@@ -3,8 +3,8 @@
 }
 
 .ships-panel__cards {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(38rem, 1fr));
   gap: 3rem;
 
   margin-top: 3rem;
@@ -14,7 +14,8 @@
   display: flex;
   flex-direction: column;
   background-color: $color-primary-white;
-  min-height: 34rem;
+  height: 40rem;
+  // min-width: 38rem;
 
   border-radius: 2rem;
 
@@ -22,14 +23,14 @@
 
   & img {
     width: 100%;
-    min-height: 20rem;
+    height: 65%;
 
     object-fit: cover;
     object-position: center;
   }
 
   &__info {
-    height: fit-content;
+    height: 25%;
     padding: 2rem;
 
     color: $color-primary-black;
@@ -46,9 +47,7 @@
     flex-direction: column;
     gap: 0.3rem;
 
-    margin-top: 2rem;
-
-    vertical-align: middle;
+    margin: 2rem 0;
 
     & div {
       display: grid;
