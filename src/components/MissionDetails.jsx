@@ -1,4 +1,5 @@
-function MissionDetails() {
+function MissionDetails({ missionDetails }) {
+  // const {} = missionDetails;
   return (
     <div className="details-panel">
       <div className="details-panel__left">
