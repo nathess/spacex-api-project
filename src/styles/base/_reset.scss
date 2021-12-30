@@ -36,8 +36,48 @@ body {
   }
 }
 
+.swiper-wrapper {
+  box-sizing: border-box !important;
+}
+
+// override swiper styling
+
 // prevents swiper to flicker on swipe in safari
 .swiper-slide {
   transform: translateZ(0);
   backface-visibility: hidden;
+}
+
+.swiper {
+  position: unset;
+}
+
+// override swiper default arrows
+.swiper-button-next {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  mask-image: url(../../icons/arrow-right.svg);
+  mask-repeat: no-repeat;
+  mask-position: 100%;
+  mask-size: auto;
+
+  background-color: $color-primary-white;
+}
+
+.swiper-button-prev {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  mask-image: url(../../icons/arrow-left.svg);
+  mask-repeat: no-repeat;
+  mask-position: 100%;
+  mask-size: auto;
+
+  background-color: $color-primary-white;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
 }

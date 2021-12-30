@@ -39,4 +39,10 @@
       text-transform: capitalize;
     }
   }
+
+  & .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 5rem;
+  }
 }

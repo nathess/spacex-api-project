@@ -48,7 +48,12 @@ function MissionDetails({ missionDetails }) {
       <div className="details-panel__right">
         <div>
           <h4 className="heading--4 label">Launch Date</h4>
-          <h3 className="heading--3">{formatDate(launch_date_local)}</h3>
+          <h3 className="heading--3 short-date">
+            {formatDate(launch_date_local)}
+          </h3>
+          <h3 className="heading--3 full-date">
+            {launch_date_local.replace("T", " ")}
+          </h3>
         </div>
         <div>
           <h4 className="heading--4 label">Launch Site</h4>

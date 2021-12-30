@@ -7,6 +7,8 @@ body {
 }
 
 .layout-container {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +17,14 @@ body {
   width: 70vw;
 
   margin: 4rem auto;
+
+  @include respond(tablet-portrait) {
+    width: 85vw;
+  }
+
+  @include respond(phone) {
+    width: 90vw;
+  }
 }
 
 .loading,
